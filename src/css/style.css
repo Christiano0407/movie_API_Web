@@ -14,8 +14,8 @@
     --font-family-Monse: 'Montserrat', sans-serif;
     --font-family-Merri-title: 'Merriweather', serif;
     /*=== Font Size*/
-    ---font-title-two: 2.4rem;
     --font-title: 1.8rem;
+    --font-title-two: 2.4rem;
     --font-medium: 1.6rem;
     --font-small: 1.2rem;
     --font-text-one: 1.2rem;
@@ -88,6 +88,12 @@ h3 {
 body {
     width: 100%;
     background-color: #f1f1f1;
+    font-family: var(--font-family-Monse);
 }
 
 /** ============ Project Movie API REST */
+.header-title {
+    color: var(--clr-primary);
+    font-weight: 700;
+    font-size: var(--font-title-two);
+}
