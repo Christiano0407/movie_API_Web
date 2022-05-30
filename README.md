@@ -8,6 +8,24 @@ Create Site Web Responsive with Movie API.  Challenge of the course API REST wit
 
 - [Platzi](https://platzi.com/home)
 
+# License Movie TMDB
+
+> Movie API_REST
+
+- [Movie_TMDB](https://www.themoviedb.org/)
+
+# API Development
+
+> Open Sourse Api Ecosystem
+
+- [Hoppscotch](https://hoppscotch.io/es/)
+
+## CDN
+
+> CDN Js
+
+- [](https://cdnjs.com/)
+
 # MIT_LICENSE
 
 > MIT License
