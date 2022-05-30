@@ -13,8 +13,8 @@
     --clr-secondary: #01b4e4;
     --clr-tertiary: #90cea1;
     /* == typography */
-    --font-family-Monse: 'Montserrat', sans-serif;
-    --font-family-Merri-title: 'Merriweather', serif;
+    --font-family-text: 'Montserrat', sans-serif;
+    --font-family-titles: 'Merriweather', serif;
     /*=== Font Size*/
     --font-title: 1.8rem;
     --font-title-two: 2.4rem;
@@ -35,6 +35,21 @@
     /* == Padding*/
     --padding: 1rem;
     --padding-two: 2rem 4rem;
+    /*== Other project*/
+    --purple-light-1: #FBFAFB;
+    --purple-light-2: #EEEAF2;
+    --purple-medium-1: #AA83C8;
+    --purple-medium-2: #8B48BF;
+    --purple-medium-3: #5C218A;
+    --purple-dark-1: #3E0F64;
+    --purple-dark-2: #2A0646;
+
+    --yellow: #EECC75;
+    --green: #CAD297;
+    --aqua: #B7EAC5;
+    --lightBlue: #A2EEE5;
+    --darkBlue: #8EA2EA;
+    --red: #F09D9D;
 }
 
 /** = ===== ====  Css Style General  ======= ======== =*/
