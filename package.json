@@ -1,0 +1,24 @@
+{
+  "name": "movie_api_web",
+  "version": "1.0.0",
+  "description": "project_movie_API",
+  "main": "src/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Christiano0407/movie_API_Web.git"
+  },
+  "keywords": [
+    "movie",
+    "javascript",
+    "api_rest"
+  ],
+  "author": "Chris04",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Christiano0407/movie_API_Web/issues"
+  },
+  "homepage": "https://github.com/Christiano0407/movie_API_Web#readme"
+}
