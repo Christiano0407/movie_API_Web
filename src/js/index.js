@@ -7,3 +7,19 @@ console.log("Hello World API REST");
 //*? Agregar a tu gitignore*/
 // => add .gitignore ( add )
 //** === Project API MOVIES === */
+
+const getTrendingMoviesPreviews = async () => {
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/trending/movie/day?api_key=` + API_KEY
+    );
+    const data = await response.json();
+
+    const movies = data.results;
+    console.log(movies);
+  } catch (error) {
+    console.log("Error get Movies Trending");
+  }
+};
+
+getTrendingMoviesPreviews();
