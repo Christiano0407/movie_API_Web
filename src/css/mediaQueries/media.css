@@ -1,0 +1,40 @@
+/*=============== Mobile ========================================*/
+@media (max-width: 360px) {}
+
+/*=============== Mobile ========================================*/
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+/*=============== #Option ========================================*/
+@media (min-width: 700px) {}
+
+/*=============== Tablet  ========================================*/
+@media screen and (min-width: 768px) {}
+
+/*=============== Screen Laptop ===================================*/
+@media screen and (min-width: 1024px) {}
+
+/*=============== #Option ===================================*/
+@media only screen and (min-width: 1200px) {}
+
+/*=============== Laptop Large  ===================================*/
+@media only screen and (min-width: 1440px) {}
+
+/*=============== Laptop Xtra Large =================================*/
+@media only screen and (min-width: 1920px) {}
+
+/* Design Model ====================================================*/
+@media screen and (orientation: landscape) {
+    body::after {
+        content: "Landscape";
+    }
+}
+
+@media screen and (orientation: portrait) {
+    body::after {
+        content: "Portrait";
+    }
+}

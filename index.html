@@ -14,12 +14,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
-    <title>Movie Web Site | API REST Movie </title>
+    <title> Play Movie || Website Responsive || API REST Movie || Platzi Movies </title>
 </head>
 
 <body>
+    <!--  == Header ==-->
+    <header class="header" id="headerID">
+        <span class="header-arrow inactive">&lt;</span>
+        <h1 class="header-title">Play Movie</h1>
+        <h1 class="header-title header-title--categoryView  inactive">Action</h1>
 
-    <!-- JAVASCRIPT ==-->
+        <form action="" id="searchForm" class="header-searchForm">
+            <input type="text" placeholder="Search Your Movies">
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+    </header>
+
+    <!-- JAVASCRIPT  and AXIOS ==-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="./src/js/index.js"></script>
 </body>
 
