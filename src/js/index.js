@@ -6,7 +6,19 @@ console.log("Hello World API REST");
 //console.log(`URL: ${API_URL}`);
 //*? Agregar a tu gitignore*/
 // => add .gitignore ( add )
-//** === Project API MOVIES === */
+
+//** <<<< === === AXIOS API REST === === >>>> */
+const API = axios.create({
+  baseURL: `https://api.themoviedb.org/3/`,
+  headers: {
+    "Content-Type": "application/json;charset=utf-8",
+  },
+  params: {
+    api_key: API_KEY,
+  },
+});
+
+//** === Project API MOVIES Container === */
 //*? ==== Trending and Preview  View add HTML  ==== */
 const getTrendingMoviesPreviews = async () => {
   try {
@@ -43,30 +55,26 @@ const getTrendingMoviesPreviews = async () => {
 };
 
 // &language=es-Mx (API)
+//*? 02  =========== New AXIOS  */
 //** ====== Categorias Movies === */
 const getCategoriesPreview = async () => {
   try {
-    const response = await fetch(
-      "https://api.themoviedb.org/3/genre/movie/list?api_key=" + API_KEY
-    );
-    /*   console.log(response); */
-    if (response.status === 200) {
-      const data = await response.json();
-      /* console.log(data); */
-      let categories = " ";
+    const { data } = await API(`genre/movie/list`);
+    const categories = data.genres;
+    /*  console.log(categories); */
 
-      data.genres.forEach((category) => {
-        categories += `  
+    let plus = " ";
+
+    categories.forEach((category) => {
+      plus += `  
            
            <div class="category-container">
            <h3 class="category-title" id=id${category.id}> ${category.name}</h3> 
            </div>
-      
            `;
-      });
+    });
 
-      document.getElementById("categoriesPreviewList").innerHTML = categories;
-    }
+    document.getElementById("categoriesPreviewList").innerHTML = plus;
   } catch (error) {
     console.log("Sorry! Your not Access a Genres");
   }
