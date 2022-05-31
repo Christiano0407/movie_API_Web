@@ -180,6 +180,18 @@ footer {
     margin-bottom: 24px;
 }
 
+.trendingPreview-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.categoriesPreview-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+}
+
 .movie-container {
     cursor: pointer;
 }
@@ -307,15 +319,20 @@ footer {
     text-overflow: ellipsis;
 }
 
+.category-title:hover {
+    color: #0d253f;
+    opacity: 0.6;
+}
+
 .category-title::before {
     content: '••••';
     color: transparent;
     /* TODO: cambiar color por ID de la categoría */
     background-color: var(--idColor);
-    border-radius: 8px;
+    border-radius: 50%;
     margin-right: 8px;
-    width: 8px;
-    height: 8px;
+    width: 5px;
+    height: 5px;
 }
 
 #id28 {

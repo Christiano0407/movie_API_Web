@@ -172,10 +172,10 @@
         color: transparent;
         /* TODO: cambiar color por ID de la categoría */
         background-color: var(--idColor);
-        border-radius: 8px;
+        border-radius: 50%;
         margin-right: 8px;
-        width: 8px;
-        height: 8px;
+        width: 5px;
+        height: 5px;
         /* background-color: #333; */
     }
 
