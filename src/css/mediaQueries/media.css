@@ -169,7 +169,7 @@
 
     .category-title::before {
         content: "****";
-        /*  color: transparent; */
+        color: transparent;
         /* TODO: cambiar color por ID de la categoría */
         background-color: var(--idColor);
         border-radius: 8px;

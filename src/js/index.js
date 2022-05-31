@@ -58,9 +58,9 @@ const getCategoriesPreview = async () => {
         categories += `  
            
            <div class="category-container">
-           <h3 class="category-title" id=${category.id}>${category.name}</h3>
+           <h3 class="category-title" id=${category.id}> ${category.name}</h3> 
            </div>
-           
+      
            `;
       });
 
