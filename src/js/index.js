@@ -18,23 +18,20 @@ const API = axios.create({
   },
 });
 
+//*?  === AXIOS part 03 ====  */
 //** === Project API MOVIES Container === */
 //*? ==== Trending and Preview  View add HTML  ==== */
 const getTrendingMoviesPreviews = async () => {
   try {
-    const trendingPreviewMovieContainer = document.querySelector(
-      `#trendingPreview   .trendingPreview-movieList  `
-    );
-
-    const response = await fetch(
-      `https://api.themoviedb.org/3/trending/movie/day?api_key=` + API_KEY
-    );
-    const data = await response.json();
+    const { data } = await API(`trending/movie/day`);
     //console.log(data.results);
-
     let movies = data.results;
 
     movies.forEach((movie) => {
+      const trendingPreviewMovieContainer = document.querySelector(
+        `#trendingPreview   .trendingPreview-movieList  `
+      );
+
       const movieContainer = document.createElement("div");
       movieContainer.classList.add("movie-container");
 
