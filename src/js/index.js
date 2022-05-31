@@ -42,4 +42,34 @@ const getTrendingMoviesPreviews = async () => {
   }
 };
 
+//** ====== Categorias Movies === */
+const getCategoriesPreview = async () => {
+  try {
+    const response = await fetch(
+      "https://api.themoviedb.org/3/genre/movie/list?api_key=" + API_KEY
+    );
+    /*   console.log(response); */
+    if (response.status === 200) {
+      const data = await response.json();
+      /* console.log(data); */
+      let categories = " ";
+
+      data.genres.forEach((category) => {
+        categories += `  
+           
+           <div class="category-container">
+           <h3 class="category-title" id=${category.id}>${category.name}</h3>
+           </div>
+           
+           `;
+      });
+
+      document.getElementById("categoriesPreviewList").innerHTML = categories;
+    }
+  } catch (error) {
+    console.log("Sorry! Your not Access a Genres");
+  }
+};
+//*?====== CALL Functions ======= */
+getCategoriesPreview();
 getTrendingMoviesPreviews();

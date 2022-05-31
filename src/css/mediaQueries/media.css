@@ -28,14 +28,21 @@
         margin-bottom: 24px;
     }
 
+    /* === Movie Container == */
     .movie-container {
         cursor: pointer;
     }
 
     .movie-img {
         border-radius: 8px;
+        cursor: pointer;
     }
 
+    .movie-img:hover {
+        filter: brightness(0.5);
+    }
+
+    /* == Categories === */
     .categoriesPreview-list,
     .categories-list {
         display: flex;
@@ -67,6 +74,9 @@
 
     .header-title {
         margin-bottom: 16px;
+        font-size: 2.4rem;
+        font-weight: 900;
+        font-family: var(--font-family-Merri-title);
     }
 
     .header-arrow {
@@ -153,17 +163,20 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        font-size: 1.2rem;
+        font-weight: 500;
     }
 
     .category-title::before {
-        content: '••••';
-        color: transparent;
+        content: "****";
+        /*  color: transparent; */
         /* TODO: cambiar color por ID de la categoría */
         background-color: var(--idColor);
         border-radius: 8px;
         margin-right: 8px;
         width: 8px;
         height: 8px;
+        /* background-color: #333; */
     }
 
     #id28 {
