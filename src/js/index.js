@@ -77,5 +77,6 @@ const getCategoriesPreview = async () => {
   }
 };
 //*?====== CALL Functions ======= */
-getCategoriesPreview();
+/* getCategoriesPreview();
 getTrendingMoviesPreviews();
+ */
