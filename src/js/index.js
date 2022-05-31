@@ -7,7 +7,7 @@ console.log("Hello World API REST");
 //*? Agregar a tu gitignore*/
 // => add .gitignore ( add )
 //** === Project API MOVIES === */
-
+//*? ==== Trending and Preview  View add HTML  ==== */
 const getTrendingMoviesPreviews = async () => {
   try {
     const trendingPreviewMovieContainer = document.querySelector(
