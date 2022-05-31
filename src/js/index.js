@@ -42,6 +42,7 @@ const getTrendingMoviesPreviews = async () => {
   }
 };
 
+// &language=es-Mx (API)
 //** ====== Categorias Movies === */
 const getCategoriesPreview = async () => {
   try {
