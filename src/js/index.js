@@ -28,7 +28,7 @@ const getTrendingMoviesPreviews = async () => {
     let movies = data.results;
 
     movies.forEach((movie) => {
-      const trendingPreviewMovieContainer = document.querySelector(
+      const trendingMoviesPreviewList = document.querySelector(
         `#trendingPreview   .trendingPreview-movieList  `
       );
 
@@ -44,7 +44,7 @@ const getTrendingMoviesPreviews = async () => {
       );
       // == Add Movies HTML ==
       movieContainer.appendChild(movieImg);
-      trendingPreviewMovieContainer.appendChild(movieContainer);
+      trendingMoviesPreviewList.appendChild(movieContainer);
     });
   } catch (error) {
     console.log("Error get Movies Trending");
