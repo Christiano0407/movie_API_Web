@@ -18,7 +18,7 @@ const API = axios.create({
   },
 });
 
-//*?  === AXIOS part 03 ====  */
+//*?  === AXIOS part 02====  */
 //** === Project API MOVIES Container === */
 //*? ==== Trending and Preview  View add HTML  ==== */
 const getTrendingMoviesPreviews = async () => {
@@ -26,6 +26,8 @@ const getTrendingMoviesPreviews = async () => {
     const { data } = await API(`trending/movie/day`);
     //console.log(data.results);
     let movies = data.results;
+    // Limpiar e quitar doble carga
+    trendingMoviesPreviewList.innerHTML = " ";
 
     movies.forEach((movie) => {
       const trendingMoviesPreviewList = document.querySelector(
@@ -52,7 +54,7 @@ const getTrendingMoviesPreviews = async () => {
 };
 
 // &language=es-Mx (API)
-//*? 02  =========== New AXIOS  */
+//*? 03  =========== New AXIOS  */
 //** ====== Categorias Movies === */
 const getCategoriesPreview = async () => {
   try {
@@ -71,7 +73,8 @@ const getCategoriesPreview = async () => {
            `;
     });
 
-    document.getElementById("categoriesPreviewList").innerHTML = plus;
+    categoriesPreviewList.innerHTML = plus;
+    // Ayuda a quitar doble carca =>  categoriesPreviewList.innerHTML = " ";
   } catch (error) {
     console.log("Sorry! Your not Access a Genres");
   }

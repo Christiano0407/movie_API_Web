@@ -30,3 +30,4 @@ const movieDetailDescription = document.querySelector(
   ".movieDetail-description"
 );
 const movieDetailScore = document.querySelector(".movieDetail-score");
+const categoryTitle = $(".category-container");
