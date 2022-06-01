@@ -8,7 +8,7 @@ const trendingPreviewSection = $("#trendingPreview");
 const categoriesPreviewSection = $("#categoriesPreview");
 const genericSection = $("#genericList");
 //const movieContainer = document.querySelector(".movie-container");
-const movieDetails = $("#movieDetails");
+const movieDetails = $("#movieDetail");
 
 //** ======== Lists & Container ======== */
 const searchForm = $("#searchForm");
