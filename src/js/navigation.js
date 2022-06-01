@@ -1,7 +1,22 @@
 //** ==== =====  Location And Hash =======   =====*/
+//*? === Buttons Events */
+searchFormBtn.addEventListener("click", () => {
+  location.hash = "#search=";
+});
+
+trendingBtn.addEventListener("click", () => {
+  location.hash = "#trends";
+});
+
+arrowBtn.addEventListener("click", () => {
+  location.hash = "#home";
+});
+
+//*? == Events Load and HashLocation */
 window.addEventListener("DOMContentLoaded", navigator, false);
 window.addEventListener("hashchange", navigator, false);
 
+//*? == Navigation */
 function navigator() {
   console.log({ location });
 
