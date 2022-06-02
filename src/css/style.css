@@ -338,7 +338,7 @@ footer {
     opacity: 0.6;
 }
 
-.btn-category {
+/* .btn-category {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
@@ -350,18 +350,18 @@ footer {
 
 .btn-category:active {
     transform: scale(0.9);
-}
+} */
 
-/* .category-title::before {
+.category-title::before {
     content: '••••';
     color: transparent;
     background-color: var(--idColor);
     border-radius: 50%;
     margin-right: 8px;
-    width: 5px;
-    height: 5px;
+    width: 15px;
+    height: 15px;
 }
- */
+
 
 #id28 {
     --idColor: var(--yellow);

@@ -56,29 +56,26 @@ const getTrendingMoviesPreviews = async () => {
 // &language=es-Mx (API)
 //*? 03  =========== New AXIOS  */
 //** ====== Categorias Movies === */
-const getCategoriesPreview = async () => {
-  try {
-    const { data } = await API(`genre/movie/list`);
-    const categories = data.genres;
-    /*  console.log(categories); */
+async function getCategoriesPreview() {
+  const { data } = await API("genre/movie/list");
+  const categories = data.genres;
 
-    let plus = " ";
+  categoriesPreviewList.innerHTML = "";
 
-    categories.forEach((category) => {
-      plus += `  
-          <div class="category-container">
-          <button  id=id${category.id} class="btn-category"></button>
-          <h3 class="category-title">${category.name}</h3>
-           </div>
-           `;
-    });
+  categories.forEach((category) => {
+    const categoryContainer = document.createElement("div");
+    categoryContainer.classList.add("category-container");
 
-    categoriesPreviewList.innerHTML = plus;
-    // Ayuda a quitar doble carca =>  categoriesPreviewList.innerHTML = " ";
-  } catch (error) {
-    console.log("Sorry! Your not Access a Genres");
-  }
-};
+    const categoryTitle = document.createElement("h3");
+    categoryTitle.classList.add("category-title");
+    categoryTitle.setAttribute("id", "id" + category.id);
+    const categoryTitleText = document.createTextNode(category.name);
+
+    categoryTitle.appendChild(categoryTitleText);
+    categoryContainer.appendChild(categoryTitle);
+    categoriesPreviewList.appendChild(categoryContainer);
+  });
+}
 //*?====== CALL Functions ======= */
 /* getCategoriesPreview();
  getTrendingMoviesPreviews(); */
