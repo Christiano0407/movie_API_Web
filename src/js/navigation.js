@@ -69,6 +69,13 @@ function categoryPage() {
   categoriesPreviewSection.classList.add("inactive");
   genericSection.classList.remove("inactive");
   movieDetails.classList.add("inactive");
+
+  //> Add function Category = Función para llamar las pelis en categorias  ====>
+  // ["#category,  id.name"]
+  const [_, categoryData] = location.hash.split("=");
+  const [categoryId, categoryName] = categoryData.split(`=`);
+  headerCategoryTitle.innerHTML = categoryName;
+  getMoviesByCategory(categoryId);
 }
 
 function movieDetailPage() {

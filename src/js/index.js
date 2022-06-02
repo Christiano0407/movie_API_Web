@@ -81,6 +81,36 @@ async function getCategoriesPreview() {
     categoriesPreviewList.appendChild(categoryContainer);
   });
 }
+
+//** Add Categories  and Movies */
+//*? ==== 04 =====> With AXIOS */
+async function getMoviesByCategory(id) {
+  const { data } = await API("discover/movie", {
+    params: {
+      with_genres: id,
+    },
+  });
+  const movies = data.results;
+  // Limpiar e quitar doble carga
+  genericSection.innerHTML = " ";
+
+  movies.forEach((movie) => {
+    const movieContainer = document.createElement("div");
+    movieContainer.classList.add("movie-container");
+
+    const movieImg = document.createElement("img");
+    movieImg.classList.add("movie-img");
+    movieImg.setAttribute(`alt`, movie.title);
+    movieImg.setAttribute(
+      `src`,
+      `https://image.tmdb.org/t/p/w300/` + movie.poster_path
+    );
+    // == Add Movies HTML ==
+    movieContainer.appendChild(movieImg);
+    genericSection.appendChild(movieContainer);
+  });
+}
+
 //*?====== CALL Functions ======= */
 /* getCategoriesPreview();
  getTrendingMoviesPreviews(); */
