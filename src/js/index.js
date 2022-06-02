@@ -60,7 +60,7 @@ async function getCategoriesPreview() {
   const { data } = await API("genre/movie/list");
   const categories = data.genres;
   // => No repetir al cargar ==
-  categoriesPreviewList.innerHTML = "";
+  categoriesPreviewList.innerHTML = " ";
 
   categories.forEach((category) => {
     const categoryContainer = document.createElement("div");

@@ -26,7 +26,7 @@ function navigator() {
     searchPage();
   } else if (location.hash.startsWith(`#movie=`)) {
     movieDetailPage();
-  } else if (location.hash.startsWith(`#category`)) {
+  } else if (location.hash.startsWith(`#category=`)) {
     categoryPage();
   } else {
     homePage();
@@ -73,8 +73,10 @@ function categoryPage() {
   //> Add function Category = Función para llamar las pelis en categorias  ====>
   // ["#category,  id.name"]
   const [_, categoryData] = location.hash.split("=");
-  const [categoryId, categoryName] = categoryData.split(`=`);
+  const [categoryId, categoryName] = categoryData.split("-");
+
   headerCategoryTitle.innerHTML = categoryName;
+
   getMoviesByCategory(categoryId);
 }
 
