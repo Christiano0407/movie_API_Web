@@ -31,3 +31,5 @@ const movieDetailDescription = document.querySelector(
 );
 const movieDetailScore = document.querySelector(".movieDetail-score");
 const categoryTitle = $(".category-container");
+const btnCategory = document.querySelector(".btn-category");
+//console.log(btnCategory);

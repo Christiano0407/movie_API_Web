@@ -66,9 +66,9 @@ const getCategoriesPreview = async () => {
 
     categories.forEach((category) => {
       plus += `  
-           
-           <div class="category-container">
-           <h3 class="category-title" id=id${category.id}> ${category.name}</h3> 
+          <div class="category-container">
+          <button  id=id${category.id} class="btn-category"></button>
+          <h3 class="category-title">${category.name}</h3>
            </div>
            `;
     });

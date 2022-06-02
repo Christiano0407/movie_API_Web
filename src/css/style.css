@@ -319,10 +319,10 @@ footer {
     max-width: 150px;
 }
 
-
 /* Categories */
 .category-container {
     width: 45%;
+    display: flex;
 }
 
 .category-title {
@@ -338,16 +338,30 @@ footer {
     opacity: 0.6;
 }
 
-.category-title::before {
+.btn-category {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    outline: none;
+    background-color: var(--idColor);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.btn-category:active {
+    transform: scale(0.9);
+}
+
+/* .category-title::before {
     content: '••••';
     color: transparent;
-    /* TODO: cambiar color por ID de la categoría */
     background-color: var(--idColor);
     border-radius: 50%;
     margin-right: 8px;
     width: 5px;
     height: 5px;
 }
+ */
 
 #id28 {
     --idColor: var(--yellow);

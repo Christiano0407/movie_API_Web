@@ -167,17 +167,16 @@
         font-weight: 500;
     }
 
-    .category-title::before {
+    /* TODO: cambiar color por ID de la categoría */
+    /* .category-title::before {
         content: "****";
         color: transparent;
-        /* TODO: cambiar color por ID de la categoría */
         background-color: var(--idColor);
         border-radius: 50%;
         margin-right: 8px;
         width: 5px;
         height: 5px;
-        /* background-color: #333; */
-    }
+    } */
 
     #id28 {
         --idColor: var(--yellow);

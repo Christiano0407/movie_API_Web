@@ -11,6 +11,7 @@ trendingBtn.addEventListener("click", () => {
 arrowBtn.addEventListener("click", () => {
   location.hash = "#home";
 });
+
 //*? == Events Load and HashLocation */
 window.addEventListener("DOMContentLoaded", navigator, false);
 window.addEventListener("hashchange", navigator, false);
