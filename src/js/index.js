@@ -59,7 +59,7 @@ const getTrendingMoviesPreviews = async () => {
 async function getCategoriesPreview() {
   const { data } = await API("genre/movie/list");
   const categories = data.genres;
-
+  // => No repetir al cargar ==
   categoriesPreviewList.innerHTML = "";
 
   categories.forEach((category) => {
@@ -69,6 +69,11 @@ async function getCategoriesPreview() {
     const categoryTitle = document.createElement("h3");
     categoryTitle.classList.add("category-title");
     categoryTitle.setAttribute("id", "id" + category.id);
+    //> Unir ID + Btn
+    categoryTitle.addEventListener("click", () => {
+      //location.hash = "#category=" + category.id + " - " + category.name;
+      location.hash = `#category=${category.id}-${category.name}`;
+    });
     const categoryTitleText = document.createTextNode(category.name);
 
     categoryTitle.appendChild(categoryTitleText);
