@@ -18,39 +18,39 @@ const API = axios.create({
   },
 });
 
+//** === ==== ====  Function General API REST ======= ====== ====  */
+//*?  == No repetir el mismo código para la API / = Utils ( funciones que voy a usar )  = */
+
+function createMovies(movies, container) {
+  // => Limpiar antes mi "caché"
+  container.innerHTML = " ";
+
+  movies.forEach((movie) => {
+    const movieContainer = document.createElement("div");
+    movieContainer.classList.add("category-container");
+
+    const movieImg = document.createElement("img");
+    movieImg.classList.add("movie-img");
+    movieImg.setAttribute(`alt`, movie.title);
+    movieImg.setAttribute(
+      `src`,
+      `https://image.tmdb.org/t/p/w300/` + movie.poster_path
+    );
+    // == Add Movies HTML ==
+    movieContainer.appendChild(movieImg);
+    container.appendChild(movieContainer);
+  });
+}
+
 //*?  === AXIOS part 02====  */
 //** === Project API MOVIES Container === */
 //*? ==== Trending and Preview  View add HTML  ==== */
 const getTrendingMoviesPreviews = async () => {
-  try {
-    const { data } = await API(`trending/movie/day`);
-    //console.log(data.results);
-    let movies = data.results;
-    // Limpiar e quitar doble carga
-    trendingMoviesPreviewList.innerHTML = " ";
-
-    movies.forEach((movie) => {
-      const trendingMoviesPreviewList = document.querySelector(
-        `#trendingPreview   .trendingPreview-movieList  `
-      );
-
-      const movieContainer = document.createElement("div");
-      movieContainer.classList.add("movie-container");
-
-      const movieImg = document.createElement("img");
-      movieImg.classList.add("movie-img");
-      movieImg.setAttribute(`alt`, movie.title);
-      movieImg.setAttribute(
-        `src`,
-        `https://image.tmdb.org/t/p/w300/` + movie.poster_path
-      );
-      // == Add Movies HTML ==
-      movieContainer.appendChild(movieImg);
-      trendingMoviesPreviewList.appendChild(movieContainer);
-    });
-  } catch (error) {
-    console.log("Error get Movies Trending");
-  }
+  const { data } = await API(`trending/movie/day`);
+  //console.log(data.results);
+  const movies = data.results;
+  //> Llamar a mi function Movies >>
+  createMovies(movies, trendingMoviesPreviewList);
 };
 
 // &language=es-Mx (API)
