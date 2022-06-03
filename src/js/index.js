@@ -56,6 +56,33 @@ async function getMoviesByCategory(id) {
   createMovies(movies, genericSection);
 }
 
+//** ADD Get Search === */
+//*?  ==== Search add Movies ==== 05  */
+//** = Add Autentication Query => Search Movies = */
+async function getMoviesBySearch(query) {
+  const { data } = await API("search/movie", {
+    params: {
+      query,
+    },
+  });
+  const movies = data.results;
+  // Limpiar e quitar doble carga
+  //genericSection.innerHTML = " ";
+
+  // Function[movies, container]
+  createMovies(movies, genericSection);
+}
+
+//** ADD Get Trends Real === */
+//*?  ==== Trends ==== 06  */
+async function trendingGetMovies() {
+  const { data } = await API(`trending/movie/day`);
+  //console.log(data.results);
+  const movies = data.results;
+  //> Llamar a mi function Movies >>
+  createMovies(movies, genericSection);
+}
+
 //*?====== CALL Functions ======= */
 /* getCategoriesPreview();
  getTrendingMoviesPreviews(); */
