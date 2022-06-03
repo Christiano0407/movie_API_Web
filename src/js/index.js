@@ -36,26 +36,9 @@ async function getCategoriesPreview() {
   const { data } = await API("genre/movie/list");
   const categories = data.genres;
   // => No repetir al cargar ==
-  categoriesPreviewList.innerHTML = " ";
+  //  categoriesPreviewList.innerHTML = " ";
 
-  categories.forEach((category) => {
-    const categoryContainer = document.createElement("div");
-    categoryContainer.classList.add("category-container");
-
-    const categoryTitle = document.createElement("h3");
-    categoryTitle.classList.add("category-title");
-    categoryTitle.setAttribute("id", "id" + category.id);
-    //> Unir ID + Btn
-    categoryTitle.addEventListener("click", () => {
-      //location.hash = "#category=" + category.id + " - " + category.name;
-      location.hash = `#category=${category.id}-${category.name}`;
-    });
-    const categoryTitleText = document.createTextNode(category.name);
-
-    categoryTitle.appendChild(categoryTitleText);
-    categoryContainer.appendChild(categoryTitle);
-    categoriesPreviewList.appendChild(categoryContainer);
-  });
+  createCategories(categories, categoriesPreviewList);
 }
 
 //** Add Categories  and Movies */
@@ -68,23 +51,9 @@ async function getMoviesByCategory(id) {
   });
   const movies = data.results;
   // Limpiar e quitar doble carga
-  genericSection.innerHTML = " ";
+  //genericSection.innerHTML = " ";
 
-  movies.forEach((movie) => {
-    const movieContainer = document.createElement("div");
-    movieContainer.classList.add("movie-container");
-
-    const movieImg = document.createElement("img");
-    movieImg.classList.add("movie-img");
-    movieImg.setAttribute(`alt`, movie.title);
-    movieImg.setAttribute(
-      `src`,
-      `https://image.tmdb.org/t/p/w300/` + movie.poster_path
-    );
-    // == Add Movies HTML ==
-    movieContainer.appendChild(movieImg);
-    genericSection.appendChild(movieContainer);
-  });
+  createMovies(movies, genericSection);
 }
 
 //*?====== CALL Functions ======= */
