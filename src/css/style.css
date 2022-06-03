@@ -231,7 +231,13 @@ footer {
 }
 
 .header-title {
-    margin-bottom: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.header-title--categoryView {
+    color: var(--purple-dark-1);
+    font-size: 3rem;
+    font-weight: 900;
 }
 
 .header-arrow {
@@ -257,6 +263,7 @@ footer {
 .header-arrow--white {
     color: var(--purple-light-1);
     background-color: var(--purple-dark-1);
+    padding: 2rem;
 }
 
 .header-searchForm {

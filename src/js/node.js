@@ -29,7 +29,7 @@ const arrowBtn = document.querySelector(".header-arrow");
 const headerCategoryTitle = document.querySelector(
   " .header-title--categoryView"
 );
-console.log(headerCategoryTitle);
+//console.log(headerCategoryTitle);
 const searchFormInput = document.querySelector("#searchForm input");
 const searchFormBtn = document.querySelector("#searchBtn");
 const trendingBtn = document.querySelector(".trendingPreview-btn");

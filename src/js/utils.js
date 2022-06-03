@@ -7,7 +7,7 @@ function createMovies(movies, container) {
 
   movies.forEach((movie) => {
     const movieContainer = document.createElement("div");
-    movieContainer.classList.add("category-container");
+    movieContainer.classList.add("movie-container");
 
     const movieImg = document.createElement("img");
     movieImg.classList.add("movie-img");
