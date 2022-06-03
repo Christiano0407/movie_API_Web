@@ -31,6 +31,10 @@ function navigator() {
   } else {
     homePage();
   }
+
+  // ADD Scroll Top = Add Navegadores =>
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 
 //** == Agregar y remover secciones con "add" and "remove"  ===== */
