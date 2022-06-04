@@ -215,7 +215,7 @@ footer {
     padding-top: 40px;
 }
 
-/** === Agregada por Js Nav*/
+/** === Agregada por Js Nav // Imagen fija de las pelis al hacer "clicl" ==== */
 .header-container--long {
     background-image: url('https://pics.filmaffinity.com/Deadpool-777527803-large.jpg');
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 19.27%, rgba(0, 0, 0, 0) 29.17%), url(https://pics.filmaffinity.com/Deadpool-777527803-large.jpg);
@@ -266,7 +266,7 @@ footer {
 .header-arrow--white {
     color: var(--purple-light-1);
     padding: 2rem;
-    border: 2px solid #3E0F64;
+    border: 2px solid #f7f7f7;
 }
 
 .header-searchForm {
@@ -485,6 +485,9 @@ footer {
     width: 80%;
     margin: 0 0 16px 0;
     padding: 0;
+    font-weight: 700;
+    color: var(--purple-dark-1);
+    font-size: 2.2rem;
 }
 
 .movieDetail-score {
@@ -502,6 +505,10 @@ footer {
 
 .movieDetail-description {
     margin: 0 0 24px 0;
+    font-weight: 500;
+    color: var(--purple-dark-2);
+    font-size: 1.4rem;
+    filter: opacity(0.7);
 }
 
 .relatedMovies-container {
