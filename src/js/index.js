@@ -106,6 +106,19 @@ async function getMovieById(id) {
 
   //> Add Image for Categories >
   createCategories(movie.genres, movieDetailsCategoriesList);
+
+  //> Similar Movies >
+  getSimilarMoviesId(id);
+}
+
+//**  ==  Add and Get Similar Movies for ID ==  08 = */
+//*? === Obtener pelis similares a la que escogimos == */
+async function getSimilarMoviesId(id) {
+  const { data } = await API(`movie/${id}/similar`);
+  const similarMovies = data.results;
+
+  //> Add Container and Similar ==>
+  createMovies(similarMovies, relatedMoviesContainer);
 }
 
 //*?====== CALL Functions ======= */
