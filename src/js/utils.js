@@ -1,5 +1,6 @@
 //** === ==== ====  Function General API REST ======= ====== ====  */
 //*?  == No repetir el mismo código para la API / = Utils ( funciones que voy a usar )  = */
+//** Agregar los Endpointes de detllaes de peli ==> Movie Container */
 
 function createMovies(movies, container) {
   // => Limpiar antes mi "caché"
@@ -8,6 +9,11 @@ function createMovies(movies, container) {
   movies.forEach((movie) => {
     const movieContainer = document.createElement("div");
     movieContainer.classList.add("movie-container");
+
+    movieContainer.addEventListener("click", () => {
+      //location.hash = `#movie=` + movie.id;
+      location.hash = `#movie=${movie.id}`;
+    });
 
     const movieImg = document.createElement("img");
     movieImg.classList.add("movie-img");

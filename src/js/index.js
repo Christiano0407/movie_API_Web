@@ -25,6 +25,7 @@ const getTrendingMoviesPreviews = async () => {
   const { data } = await API(`trending/movie/day`);
   //console.log(data.results);
   const movies = data.results;
+  //console.log(movies);
   //> Llamar a mi function Movies >>
   createMovies(movies, trendingMoviesPreviewList);
 };
@@ -81,6 +82,19 @@ async function trendingGetMovies() {
   const movies = data.results;
   //> Llamar a mi function Movies >>
   createMovies(movies, genericSection);
+}
+
+//** Add Get Movies By ID ===  */
+//*?  ==> Endpoints Details  == ID Movies = 07*/
+async function getMovieById(id) {
+  const { data: movie } = await API(`movie/` + id); // movie/{movie_id}
+
+  movieDetailTitle.textContent = movie.title;
+  movieDetailDescription.textContent = movie.overview;
+  movieDetailScore.textContent = movie.vote_average;
+
+  //> Add Image for Categories >
+  createCategories(movie.genres, movieDetailsCategoriesList);
 }
 
 //*?====== CALL Functions ======= */

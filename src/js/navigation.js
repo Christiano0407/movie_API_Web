@@ -101,6 +101,7 @@ function categoryPage() {
   getMoviesByCategory(categoryId);
 }
 //*? =  Movie Detail Page  =  */
+//** Agregamos los detalles de las movies en Endpoints === */
 function movieDetailPage() {
   console.log("Movies!!");
   headerSection.classList.add(`header-container--long`);
@@ -115,6 +116,11 @@ function movieDetailPage() {
   categoriesPreviewSection.classList.add("inactive");
   genericSection.classList.add("inactive");
   movieDetails.classList.remove("inactive");
+
+  //> Add Movies Info ==
+  //  >  movie/ id
+  const [_, movieId] = location.hash.split("=");
+  getMovieById(movieId);
 }
 //*? =  Search  =  */
 function searchPage() {
@@ -154,6 +160,7 @@ function trendsPage() {
   movieDetails.classList.add("inactive");
 
   // === ADD Trending Movies Really ==
+  headerCategoryTitle.innerHTML = "Tendencias";
   trendingGetMovies();
 }
 
