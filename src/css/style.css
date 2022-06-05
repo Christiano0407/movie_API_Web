@@ -543,6 +543,29 @@ footer {
     max-height: 187.5px;
 }
 
+/** ==== Popular Movies === */
+.popularPreview-container {
+    padding: 0 24px;
+}
+
+.popularPreview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem auto;
+}
+
+.popularPreview-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--purple-medium-3);
+}
+
+.popularPreview-btn {
+    border-radius: 8px;
+    height: 3.2rem;
+    width: 7.2rem;
+}
 
 /** ===  Footer */
 footer {
