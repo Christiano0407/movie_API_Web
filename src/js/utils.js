@@ -22,6 +22,11 @@ function createMovies(movies, container) {
       `src`,
       `https://image.tmdb.org/t/p/w300/` + movie.poster_path
     );
+
+    /* const movieTitle = document.createElement("h2");
+    movieTitle.classList.add("movie-titles");
+    movieTitle.innerHTML = movie.title; */
+    /* movieContainer.appendChild(movieTitle); */
     // == Add Movies HTML ==
     movieContainer.appendChild(movieImg);
     container.appendChild(movieContainer);

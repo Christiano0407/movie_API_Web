@@ -15,6 +15,10 @@ const searchForm = document.querySelector("#searchForm");
 const trendingMoviesPreviewList = document.querySelector(
   ".trendingPreview-movieList"
 );
+const popularMoviePreviewList = document.querySelector(
+  ".popularPreview-movieList"
+);
+
 const categoriesPreviewList = document.querySelector(".categoriesPreview-list");
 const movieDetailsCategoriesList = document.querySelector(
   "#movieDetail .categories-list"
